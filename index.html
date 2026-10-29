@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f4ef">
+    <meta name="description" content="Монгол орны 21 аймгийн түүх, байгалийн үзэсгэлэнт газар, аяллын мэдээллийг интерактив газрын зургаас нээгээрэй.">
+    <title>Талын мөр — Монгол орныг нээе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Талын мөр нүүр хуудас">
+            <span class="brand-mark" aria-hidden="true">
+                <span>△</span>
+            </span>
+            <span><span class="brand-name">Талын мөр</span><span class="brand-caption">Монгол орны аялал</span></span>
+        </a>
+        <a class="header-link" href="#aimag-list">Аймгуудыг үзэх <span class="header-link-arrow" aria-hidden="true">→</span></a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="eyebrow">Монгол орныг нээе</div>
+            <h1>Тал нутгийн түүх,<br>таны аяллаас эхэлнэ.</h1>
+            <p>Газрын зураг дээрх аймгаа сонгоод, түүний түүх ба үзэсгэлэнт газруудтай танилцаарай.</p>
+        </div>
+    </section>
+
+    <main class="page-main">
+        <section class="explorer" aria-label="Монгол орны интерактив газрын зураг">
+            <div class="map-panel">
+                <div class="panel-top">
+                    <div>
+                        <div class="section-kicker">Интерактив газрын зураг</div>
+                        <h2 class="panel-title">Монгол Улсын 21 аймаг</h2>
+                    </div>
+                    <div class="map-hint"><span aria-hidden="true">⌖</span>Аймаг дээр дарна уу</div>
+                </div>
+                <div class="map-wrap">
+                    <img class="map-image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Mongolia_blank.svg/960px-Mongolia_blank.svg.png" alt="Монгол Улсын 21 аймаг, аймгийн хил бүхий газрын зураг" loading="eager" decoding="async">
+                    <div id="map-markers" aria-label="Газрын зураг дээрх аймгууд"></div>
+                </div>
+                <div class="map-legend" aria-label="Газрын зургийн тайлбар">
+                    <span class="legend-item"><span class="legend-swatch active"></span>Сонгосон аймаг</span>
+                    <span class="legend-item"><span class="legend-swatch"></span>Бусад аймаг</span>
+                </div>
+                <div class="map-credit">Газрын зургийн эх сурвалж: <a href="https://commons.wikimedia.org/wiki/File:Mongolia_blank.svg" target="_blank" rel="noopener noreferrer">MacedonianBoy · CC BY-SA 3.0</a></div>
+            </div>
+
+            <aside class="detail-panel" aria-live="polite">
+                <div class="detail-image">
+                    <img id="detail-photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Terkhiin_Tsagaan_Lake_01.jpg/1280px-Terkhiin_Tsagaan_Lake_01.jpg" alt="Тэрхийн цагаан нуур, Архангай">
+                    <span class="image-tag">✦ Онцлох нутаг</span>
+                    <span class="image-caption" id="photo-caption">Хангайн нуруу · Архангай</span>
+                    <a class="image-source" id="image-source" href="https://commons.wikimedia.org/wiki/File:Terkhiin_Tsagaan_Lake_01.jpg" target="_blank" rel="noopener noreferrer">Зургийн эх сурвалж</a>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-heading-row">
+                        <div>
+                            <h2 class="detail-heading" id="detail-name">Архангай</h2>
+                            <p class="detail-subtitle" id="detail-subtitle">Хангайн нурууны зүрхэнд</p>
+                        </div>
+                        <span class="detail-number" id="detail-number">01</span>
+                    </div>
+                    <p class="detail-description" id="detail-description"></p>
+                    <div class="fact-row">
+                        <div><div class="fact-label">Аймгийн төв</div><div class="fact-value" id="detail-center"></div></div>
+                        <div><div class="fact-label">Бүс нутаг</div><div class="fact-value" id="detail-region"></div></div>
+                    </div>
+                    <div class="sights-title">Заавал үзэх газрууд</div>
+                    <div class="sights-list" id="detail-sights"></div>
+                    <a class="detail-link" id="detail-link" href="aimags/arkhangai.html">Дэлгэрэнгүй түүхийг унших <span aria-hidden="true">→</span></a>
+                </div>
+            </aside>
+        </section>
+
+        <section class="below-map" aria-label="Монгол орны тухай">
+            <div class="stat"><span class="stat-icon" aria-hidden="true">▱</span><span class="stat-copy"><span class="stat-number">21 аймаг</span><span class="stat-label">Нэгэн эх орон</span></span></div>
+            <div class="stat"><span class="stat-icon" aria-hidden="true">⌖</span><span class="stat-copy"><span class="stat-number">1.56 сая км²</span><span class="stat-label">Өргөн уудам нутаг</span></span></div>
+            <div class="stat"><span class="stat-icon" aria-hidden="true">✦</span><span class="stat-copy"><span class="stat-number">Мянга мянган түүх</span><span class="stat-label">Нээхэд бэлэн</span></span></div>
+        </section>
+
+        <section class="browse-section" id="aimag-list">
+            <div class="browse-top">
+                <div><h2>Аяллаа сонгоорой</h2><p>Сонирхсон аймгаа хайх эсвэл жагсаалтаас сонгоно уу.</p></div>
+                <label class="search-box">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input type="search" id="aimag-search" placeholder="Аймгийн нэрээр хайх..." aria-label="Аймгийн нэрээр хайх">
+                </label>
+            </div>
+            <div class="aimag-grid" id="aimag-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2025 Талын мөр · Монгол орныг танин мэдэх аялал</span><span>Өргөн тал, уудам түүх.</span></footer>
+
+    <script>
+        const aimags = [
+            { name: "Баян-Өлгий", center: "Өлгий", region: "Баруун", subtitle: "Алтайн мөнх цаст оргилууд", history: "Монгол орны хамгийн баруун захад орших, Алтайн нурууны сүрлэг оргилууд болон нүүдэлчин бүргэдчдийн өв соёлоороо алдартай нутаг.", sights: ["Алтай Таван Богд", "Потанины мөсөн гол", "Ёлтын сав газар"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Camping_in_Tavan_Bogd.jpg/1280px-Camping_in_Tavan_Bogd.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Camping_in_Tavan_Bogd.jpg", photoCredit: "Altaihunters · CC BY-SA 3.0", photoCaption: "Алтай Таван Богд", x: 108, y: 223 },
+            { name: "Увс", center: "Улаангом", region: "Баруун", subtitle: "Нуур, цөлийн гайхамшиг", history: "Увс нуурын ай савын өвөрмөц экосистем, эртний булш хиргисүүр, олон ястны өв соёл цогцолсон баруун хязгаарын нутаг.", sights: ["Увс нуур", "Хяргас нуур", "Цагаан шувуут уул"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Mongolian_beautiful_Uvs_Lake.jpg/1280px-Mongolian_beautiful_Uvs_Lake.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Mongolian_beautiful_Uvs_Lake.jpg", photoCredit: "Yumjirdulam0501 · CC0", photoCaption: "Увс нуур", x: 166, y: 151 },
+            { name: "Ховд", center: "Ховд", region: "Баруун", subtitle: "Олон ястны өлгий нутаг", history: "Монгол Алтайн салбар уулс, Хар-Ус нуурын цогцолбороос гадна олон ястны хэл, зан заншил зэрэгцэн оршдог түүхэн нутаг.", sights: ["Хар-Ус нуур", "Мөнххайрхан уул", "Хар нуур"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Khar-Us-Nuur_Lake_ISS006-E-7827_cropped%2C_rotated.jpg/1280px-Khar-Us-Nuur_Lake_ISS006-E-7827_cropped%2C_rotated.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Khar-Us-Nuur_Lake_ISS006-E-7827_cropped,_rotated.jpg", photoCredit: "NASA · Public domain", photoCaption: "Хар-Ус нуур · сансраас авсан зураг", x: 164, y: 261 },
+            { name: "Завхан", center: "Улиастай", region: "Баруун", subtitle: "Элсэн манхан, мөнх уулс", history: "Хангайн нурууны баруун хойд хэсэгт орших, өндөр уулсаас говь цөлийн бүс хүртэлх байгалийн олон янз тогтоцтой аймаг.", sights: ["Отгонтэнгэр уул", "Мухартын гол", "Загийн гол"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Otgon_tenger_uul_2009.jpg/1280px-Otgon_tenger_uul_2009.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Otgon_tenger_uul_2009.jpg", photoCredit: "Andre Felbrich · CC BY-SA 3.0", photoCaption: "Отгонтэнгэр уул", x: 238, y: 178 },
+            { name: "Говь-Алтай", center: "Алтай", region: "Баруун", subtitle: "Говь ба Алтайн уулс", history: "Говийн уудам хөндий, Алтайн нурууны салбар уулс нийлсэн, байгалийн онгон төрхөө хадгалсан баруун бүсийн аймаг.", sights: ["Ээж хайрхан", "Хасагт хайрхан", "Бурхан буудай"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Eej_Khairkhan_Mount_-_panoramio.jpg/1280px-Eej_Khairkhan_Mount_-_panoramio.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Eej_Khairkhan_Mount_-_panoramio.jpg", photoCredit: "Mongolia Expeditions · CC BY 3.0", photoCaption: "Ээж хайрхан уул", x: 239, y: 286 },
+            { name: "Хөвсгөл", center: "Мөрөн", region: "Хойд", subtitle: "Хөх сувдын хязгаар", history: "Дэлхийн цэнгэг усны томоохон нөөцийн нэг Хөвсгөл нуур, тайгын ой, цаатан иргэдийн өвөрмөц ахуйгаараа танигдсан.", sights: ["Хөвсгөл нуур", "Хорьдол сарьдаг", "Уушгийн өврийн буган хөшөө"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Khuvsgul_Lake.jpg/1280px-Khuvsgul_Lake.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Khuvsgul_Lake.jpg", photoCredit: "Teo Romera · CC BY-SA 2.0", photoCaption: "Хөвсгөл нуур", x: 331, y: 119 },
+            { name: "Архангай", center: "Цэцэрлэг", region: "Төв", subtitle: "Хангайн нурууны зүрхэнд", history: "Хангайн нурууны үзэсгэлэнт байгаль, халуун рашаан, эртний түүхэн дурсгалуудаараа аялагчдын сэтгэлийг татдаг.", sights: ["Тэрхийн цагаан нуур", "Хорго галт уул", "Тайхар чулуу"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Terkhiin_Tsagaan_Lake_01.jpg/1280px-Terkhiin_Tsagaan_Lake_01.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Terkhiin_Tsagaan_Lake_01.jpg", photoCredit: "Bernard Gagnon · CC0", photoCaption: "Тэрхийн цагаан нуур", x: 327, y: 222 },
+            { name: "Баянхонгор", center: "Баянхонгор", region: "Өмнөд", subtitle: "Байгалийн олон өнгө", history: "Монгол орны хамгийн олон янзын байгалийн бүсийг дамнан оршдог бөгөөд мөсөн гол, тал хээр, говь зэрэгцсэн өргөн нутаг.", sights: ["Эхийн гол", "Бөөнцагаан нуур", "Цагаан агуй"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Lake_Buuntsagaan%2C_Mongolia.jpg/1280px-Lake_Buuntsagaan%2C_Mongolia.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Lake_Buuntsagaan,_Mongolia.jpg", photoCredit: "Noel Marsh-Giddings · CC BY-SA 3.0", photoCaption: "Бөөнцагаан нуур", x: 327, y: 326 },
+            { name: "Өвөрхангай", center: "Арвайхээр", region: "Төв", subtitle: "Эртний нийслэлийн мөрөөр", history: "Эртний Хархорум хот, Эрдэнэ Зуу хийд зэрэг Монголын эзэнт гүрний түүхийг өгүүлэх өв соёлын дурсгалт газруудтай.", sights: ["Эрдэнэ Зуу хийд", "Хархорум", "Орхоны хөндий"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/%C5%9Awi%C4%85tynia_Zachodnia_w_klasztorze_Erdene_Dzuu_01.jpg/1280px-%C5%9Awi%C4%85tynia_Zachodnia_w_klasztorze_Erdene_Dzuu_01.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:%C5%9Awi%C4%85tynia_Zachodnia_w_klasztorze_Erdene_Dzuu_01.jpg", photoCredit: "Marcin Konsek · CC BY-SA 4.0", photoCaption: "Эрдэнэ Зуу хийд", x: 414, y: 269 },
+            { name: "Булган", center: "Булган", region: "Хойд", subtitle: "Ой тайга, гол мөрний нутаг", history: "Сэлэнгэ мөрний сав газарт орших үржил шимт хөндий, уул тайгын байгаль, түүхэн дурсгалуудаараа алдартай.", sights: ["Уран тогоо уул", "Сэлэнгэ мөрөн", "Талын хадны зураг"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/UranTogooCaldera.jpg/1280px-UranTogooCaldera.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:UranTogooCaldera.jpg", photoCredit: "Chinneeb · CC BY-SA 4.0", photoCaption: "Уран тогоо галт уул", x: 404, y: 158 },
+            { name: "Орхон", center: "Эрдэнэт", region: "Хойд", subtitle: "Зэс хотын түүх", history: "Монголын уул уурхайн томоохон төв Эрдэнэт хотыг түшиглэн хөгжсөн, Орхон голын хөндийд орших аймаг.", sights: ["Эрдэнэт хот", "Амарбаясгалант хийд", "Эрдэнэт уул"], photo: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Erdenet%2C_Mongolia_-_panoramio_-_Alex_Ang.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Erdenet,_Mongolia_-_panoramio_-_Alex_Ang.jpg", photoCredit: "Alex Ang · CC BY-SA 3.0", photoCaption: "Эрдэнэт хот", x: 448, y: 179 },
+            { name: "Дархан-Уул", center: "Дархан", region: "Хойд", subtitle: "Хөгжил, уламжлалын уулзвар", history: "Монгол орны хойд бүсийн аж үйлдвэр, соёлын төв Дархан хотыг багтаасан, түүхэн хийдүүдэд ойрхон аймаг.", sights: ["Морин хуурын цогцолбор", "Хараагийн хийд", "Дархан хот"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Darkhan.jpg/1280px-Darkhan.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Darkhan.jpg", photoCredit: "Chongkian · CC BY-SA 4.0", photoCaption: "Дархан хот", x: 483, y: 144 },
+            { name: "Сэлэнгэ", center: "Сүхбаатар", region: "Хойд", subtitle: "Хойд хилийн ногоон бүс", history: "Сэлэнгэ мөрний сав газрын тариалангийн үржил шимт хөндий, ой тайга, түүхэн хийдүүдээр баялаг нутаг.", sights: ["Амарбаясгалант хийд", "Сэлэнгэ мөрөн", "Ерөө гол"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Amarbayasgalant_monastery_temple_01.JPG/1280px-Amarbayasgalant_monastery_temple_01.JPG", photoSource: "https://commons.wikimedia.org/wiki/File:Amarbayasgalant_monastery_temple_01.JPG", photoCredit: "Bogomolov.PL · Public domain", photoCaption: "Амарбаясгалант хийд", x: 531, y: 131 },
+            { name: "Төв", center: "Зуунмод", region: "Төв", subtitle: "Нийслэлийг тойрсон нутаг", history: "Хангайн нурууны зүүн хаяа, Туул голын сав газар болон Богд хан уулын дархан цаазат газрыг хамардаг.", sights: ["Богд хан уул", "Манзушир хийд", "Гүн галуутай"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Manzushir_Khiid_149194574_c0a3034dae_o.jpg/1280px-Manzushir_Khiid_149194574_c0a3034dae_o.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Manzushir_Khiid_149194574_c0a3034dae_o.jpg", photoCredit: "yeowatzup · CC BY 2.0", photoCaption: "Манзушир хийд", x: 481, y: 228 },
+            { name: "Дундговь", center: "Мандалговь", region: "Говь", subtitle: "Дуу хуурын уудам говь", history: "Говийн уудам тал, өвөрмөц тогтоц бүхий хад чулуут уулсаараа алдартай бөгөөд уртын дуу, морин хуурын өлгий нутаг.", sights: ["Их газрын чулуу", "Бага газрын чулуу", "Дэл уул"], photo: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Tsagaan_Suvarga_Limestone_Cliffs%2C_Mongolia.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Tsagaan_Suvarga_Limestone_Cliffs,_Mongolia.jpg", photoCredit: "Ujin bold · CC BY 4.0", photoCaption: "Цагаан суваргын цохио", x: 493, y: 313 },
+            { name: "Өмнөговь", center: "Даланзадгад", region: "Говь", subtitle: "Говийн сүрлэг гайхамшиг", history: "Говь гурван сайхны уулс, үлэг гүрвэлийн олдвор бүхий Баянзаг, аварга манхануудтай дэлхийд алдартай говийн нутаг.", sights: ["Ёлын ам", "Хонгорын элс", "Баянзаг"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Khongoryn_Els_04.jpg/1280px-Khongoryn_Els_04.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Khongoryn_Els_04.jpg", photoCredit: "Bernard Gagnon · CC0", photoCaption: "Хонгорын элс", x: 433, y: 366 },
+            { name: "Говьсүмбэр", center: "Чойр", region: "Төв", subtitle: "Тал хээрийн зам огтолцох нь", history: "Говийн хээр тал, Хэрлэнгийн сав газрыг холбосон төмөр замын зангилаа бөгөөд эртний суурьшлын ул мөртэй нутаг.", sights: ["Чойрын богд уул", "Зүүн Чойрын хийд", "Сүмбэрийн тал"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Choyr.JPG/1280px-Choyr.JPG", photoSource: "https://commons.wikimedia.org/wiki/File:Choyr.JPG", photoCredit: "Golf Bravo · CC BY-SA 3.0", photoCaption: "Чойр хотын төмөр замын буудал", x: 555, y: 285 },
+            { name: "Дорноговь", center: "Сайншанд", region: "Говь", subtitle: "Говийн ариун дагшин газар", history: "Дорнын говийн тал, говийн соён гэгээрүүлэгч Данзанравжаагийн өв, Хамрын хийдээрээ алдартай.", sights: ["Хамрын хийд", "Энергийн төв", "Их нартын байгалийн нөөц"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Gobi%2C_Klasztor_Chamaryn_%2804%29.jpg/1280px-Gobi%2C_Klasztor_Chamaryn_%2804%29.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Gobi,_Klasztor_Chamaryn_(04).jpg", photoCredit: "Marcin Konsek · CC BY-SA 4.0", photoCaption: "Хамрын хийд", x: 592, y: 347 },
+            { name: "Хэнтий", center: "Чингис хот", region: "Зүүн", subtitle: "Их хааны өлгий нутаг", history: "Бурхан Халдун хайрхан, Онон-Балжийн сав газар зэрэг Монголын түүх, Чингис хааны намтартай холбоотой ариун дагшин газруудтай.", sights: ["Бурхан Халдун", "Онон-Балжийн цогцолбор", "Дэлүүн болдог"], photo: "https://upload.wikimedia.org/wikipedia/commons/5/58/Burkhan_Khaldun_mount3.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Burkhan_Khaldun_mount3.jpg", photoCredit: "Ganzorig Gavaa · CC BY-SA 2.0", photoCaption: "Бурхан Халдун хайрхан", x: 583, y: 230 },
+            { name: "Дорнод", center: "Чойбалсан", region: "Зүүн", subtitle: "Дорнын уудам хээр тал", history: "Монголын хамгийн том тал хээр, Дагуурын дархан цаазат газрын нүүдлийн шувууд, Халх голын түүхэн дурсгалыг хадгалсан.", sights: ["Халх гол", "Буйр нуур", "Мэнэнгийн тал"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Buir_Nuur_in_Eastern_Mongolia_and_in_China_%28Inner_Mongolia%29%2C_LandSat-7_2005-08-9.png/1280px-Buir_Nuur_in_Eastern_Mongolia_and_in_China_%28Inner_Mongolia%29%2C_LandSat-7_2005-08-9.png", photoSource: "https://commons.wikimedia.org/wiki/File:Buir_Nuur_in_Eastern_Mongolia_and_in_China_(Inner_Mongolia),_LandSat-7_2005-08-9.png", photoCredit: "NASA · Public domain", photoCaption: "Буйр нуур · NASA-ийн сансрын зураг", x: 699, y: 193 },
+            { name: "Сүхбаатар", center: "Баруун-Урт", region: "Зүүн", subtitle: "Домогт уулс, тал нутгийн жим", history: "Эртний домог, хадны сүг зураг, галт уулын тогоо бүхий Сүхбаатар аймаг дорнын талын өвөрмөц тогтоцтой.", sights: ["Алтан овоо", "Шилийн богд", "Ганга нуур"], photo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Shiliin_bogd.jpg/1280px-Shiliin_bogd.jpg", photoSource: "https://commons.wikimedia.org/wiki/File:Shiliin_bogd.jpg", photoCredit: "Gologmine · CC BY-SA 4.0", photoCaption: "Шилийн богд галт уул", x: 659, y: 282 }
+        ];
+
+        const aimagPages = [
+            "bayan-olgii.html", "uvs.html", "khovd.html", "zavkhan.html",
+            "govi-altai.html", "khuvsgul.html", "arkhangai.html", "bayankhongor.html",
+            "uvurkhangai.html", "bulgan.html", "orkhon.html", "darkhan-uul.html",
+            "selenge.html", "tov.html", "dundgovi.html", "omnogovi.html",
+            "govisumber.html", "dornogovi.html", "khentii.html", "dornod.html",
+            "sukhbaatar.html"
+        ];
+
+        const mapMarkers = document.getElementById("map-markers");
+        aimags.forEach((aimag, index) => {
+            const marker = document.createElement("button");
+            marker.type = "button";
+            marker.className = "map-marker";
+            marker.dataset.index = index;
+            marker.style.setProperty("--x", `${aimag.x / 8}%`);
+            marker.style.setProperty("--y", `${aimag.y / 5}%`);
+            marker.textContent = aimag.name;
+            marker.setAttribute("aria-label", `${aimag.name} аймгийг сонгох`);
+            marker.addEventListener("click", () => selectAimag(index));
+            mapMarkers.appendChild(marker);
+        });
+
+        const cardsLayer = document.getElementById("aimag-grid");
+        const searchInput = document.getElementById("aimag-search");
+        let selectedIndex = 6;
+
+        function selectAimag(index) {
+            selectedIndex = index;
+            const aimag = aimags[index];
+            document.getElementById("detail-name").textContent = aimag.name;
+            document.getElementById("detail-number").textContent = String(index + 1).padStart(2, "0");
+            document.getElementById("detail-subtitle").textContent = aimag.subtitle;
+            document.getElementById("detail-description").textContent = aimag.history;
+            document.getElementById("detail-center").textContent = aimag.center;
+            document.getElementById("detail-region").textContent = `${aimag.region} бүс`;
+            document.getElementById("detail-link").href = `aimags/${aimagPages[index]}`;
+            document.getElementById("photo-caption").textContent = `${aimag.photoCaption || aimag.sights[0]} · ${aimag.name}`;
+            const photo = document.getElementById("detail-photo");
+            photo.alt = `${aimag.name} аймгийн байгалийн үзэсгэлэнт газар`;
+            photo.src = aimag.photo;
+            document.getElementById("image-source").href = aimag.photoSource;
+            document.getElementById("image-source").textContent = `Зураг: ${aimag.photoCredit}`;
+            const sights = document.getElementById("detail-sights");
+            sights.replaceChildren(...aimag.sights.map(sight => {
+                const chip = document.createElement("span");
+                chip.className = "sight-chip";
+                chip.textContent = sight;
+                return chip;
+            }));
+
+            document.querySelectorAll(".map-marker").forEach(marker => {
+                marker.classList.toggle("selected", Number(marker.dataset.index) === index);
+                marker.setAttribute("aria-pressed", String(Number(marker.dataset.index) === index));
+            });
+            document.querySelectorAll(".aimag-card").forEach(card => {
+                const isSelected = Number(card.dataset.index) === index;
+                card.classList.toggle("selected", isSelected);
+                if (isSelected) card.setAttribute("aria-current", "true");
+                else card.removeAttribute("aria-current");
+            });
+        }
+
+        function renderAimagCards(query = "") {
+            const normalizedQuery = query.trim().toLocaleLowerCase("mn");
+            const matches = aimags.map((aimag, index) => ({ aimag, index }))
+                .filter(({ aimag }) => aimag.name.toLocaleLowerCase("mn").includes(normalizedQuery));
+            cardsLayer.replaceChildren();
+            if (!matches.length) {
+                const empty = document.createElement("div");
+                empty.className = "empty-results";
+                empty.textContent = "Ийм нэртэй аймаг олдсонгүй. Өөр нэрээр хайгаарай.";
+                cardsLayer.appendChild(empty);
+                return;
+            }
+            matches.forEach(({ aimag, index }) => {
+                const card = document.createElement("button");
+                card.type = "button";
+                card.className = "aimag-card";
+                card.dataset.index = index;
+                card.setAttribute("aria-label", `${aimag.name} аймгийн мэдээлэл нээх`);
+                const number = document.createElement("span");
+                number.className = "card-index";
+                number.textContent = String(index + 1).padStart(2, "0");
+                const name = document.createElement("span");
+                name.className = "card-name";
+                name.textContent = aimag.name;
+                card.append(number, name);
+                card.addEventListener("click", () => {
+                    window.location.href = `aimags/${aimagPages[index]}`;
+                });
+                cardsLayer.appendChild(card);
+            });
+            selectAimag(selectedIndex);
+        }
+
+        searchInput.addEventListener("input", event => renderAimagCards(event.target.value));
+        renderAimagCards();
+    </script>
+</body>
+</html>
